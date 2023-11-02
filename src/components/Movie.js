@@ -13,12 +13,18 @@ export default function Movie({
 }) {
 
     useEffect(() => {
+        //Mount component
         console.log(`Movie ${title} mounted!`);
+
+        //Unmount component
+        return () => {
+            console.log(`Movie ${title} unmounted!`);
+        }
     }, []);
 
     useEffect(() => {
         console.log(`Movie ${title} - updated!`);
-    }, [selected])
+    }, [selected]);
 
     return (
         <article>
