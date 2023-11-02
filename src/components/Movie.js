@@ -21,12 +21,12 @@ export default function Movie({
         return () => {
             console.log(`Movie ${title} unmounted!`);
         }
-    }, []);
+    }, [title]);
 
     //TODO: fix update func; all components updates
     useEffect(() => {
         console.log(`Movie ${title} - updated!`);
-    }, [selected]);
+    }, [selected, title]);
 
     return (
         <article className={styles['movie-article']}>
